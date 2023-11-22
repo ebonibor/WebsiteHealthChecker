@@ -3,6 +3,7 @@
 ## Description/Описание
 Простая программа для проверки доступности веб-сайта. Работает через командную строку.
 
+
 A simple program for checking website availability. Operates through the command line.
 
 ## Usage/Использование
