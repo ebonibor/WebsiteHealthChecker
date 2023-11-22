@@ -10,7 +10,7 @@ import (
 
 func main() {
 	app := &cli.App{
-		Name:  "Healthchecker",
+		Name:  "WebsiteHealthChecker",
 		Usage: "Check whether a website is up or down",
 		Flags: []cli.Flag{
 			&cli.StringFlag{
@@ -28,9 +28,11 @@ func main() {
 		},
 		Action: func(c *cli.Context) error {
 			port := c.String("port")
+
 			if c.String("port") == "" {
 				port = "80"
 			}
+
 			status := Check(c.String("url"), port)
 			fmt.Println(status)
 			return nil
